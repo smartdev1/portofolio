@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Mail, Github, Linkedin, Send, MapPin, Copy, Check } from 'lucide-vue-next'
+import emailjs from '@emailjs/browser'
 
 const { t } = useI18n()
 
@@ -58,16 +59,31 @@ const sent = ref(false)
 
 const handleSubmit = async () => {
   sending.value = true
-  // Simulate form submission
-  await new Promise(resolve => setTimeout(resolve, 1500))
-  sending.value = false
-  sent.value = true
-  
-  // Reset form after showing success
-  setTimeout(() => {
-    form.value = { name: '', email: '', subject: '', message: '' }
-    sent.value = false
-  }, 3000)
+  try {
+    await emailjs.send(
+      'service_w5gumtr',
+      'template_oivzhvl',
+      {
+        from_name: form.value.name,
+        from_email: form.value.email,
+        subject: form.value.subject,
+        message: form.value.message,
+        to_email: 'aristide.adouko@outlook.com'
+      },
+      '3kB4RPx5OEX7zmKuC'
+    )
+    sent.value = true
+    // Reset form after showing success
+    setTimeout(() => {
+      form.value = { name: '', email: '', subject: '', message: '' }
+      sent.value = false
+    }, 3000)
+  } catch (error) {
+    console.error('Erreur lors de l\'envoi:', error)
+    // Vous pouvez ajouter une gestion d'erreur ici, comme afficher un message d'erreur
+  } finally {
+    sending.value = false
+  }
 }
 
 const buttonText = computed(() => {

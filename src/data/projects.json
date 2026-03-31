@@ -1,9 +1,9 @@
 [
   {
-    "id": "ecommerce-api",
-    "title": "E-Commerce REST API",
+    "id": 1,
+    "title": "mphb-hourly-booking",
     "shortDescription": "Scalable RESTful API powering a multi-tenant e-commerce platform with real-time inventory management.",
-    "techStack": ["Laravel", "MySQL", "Redis", "Docker"],
+    "techStack": ["PHP", "WordPress", "OPCache"],
     "github": "https://github.com/alexchen/ecommerce-api",
     "demo": "https://api-docs.example.com",
     "context": "Built for a startup that needed to support multiple vendor storefronts on a single platform. The system needed to handle high traffic during sales events while maintaining data consistency across tenants.",
