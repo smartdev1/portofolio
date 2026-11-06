@@ -24,7 +24,7 @@ export const ArchitectureDetailModal: React.FC = () => {
     setTimeout(() => {
       setClosing(false);
       setSelectedProject(null);
-    }, 200);
+    }, 350);
   }, [setSelectedProject]);
 
   if (!selectedProject) return null;
