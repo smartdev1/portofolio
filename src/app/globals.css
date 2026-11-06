@@ -1,0 +1,293 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-display), "Space Grotesk", system-ui, sans-serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", monospace;
+
+  --color-surface: #f8fafc;
+  --color-surface-dim: #f1f5f9;
+  --color-surface-card: #ffffff;
+  --color-border-tech: #e2e8f0;
+  --color-border-tech-subtle: #cbd5e1;
+  --color-ink-primary: #0f172a;
+  --color-ink-secondary: #334155;
+  --color-ink-muted: #64748b;
+  --color-tech-blue: #2563eb;
+  --color-tech-emerald: #059669;
+}
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  min-height: 100%;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Studio Tech Grid Pattern */
+.tech-grid-pattern {
+  background-image: radial-gradient(var(--grid-dot) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+/* Modal and Glass Backdrops */
+.modal-backdrop {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.glass-panel {
+  background: var(--bg-pill);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-primary);
+}
+
+/* Custom Scrollbar for Modal and Lists */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Subtle smooth glow */
+.subtle-ring {
+  box-shadow: 0 0 0 1px rgba(226, 232, 240, 0.8), 0 2px 8px -2px rgba(15, 23, 42, 0.05);
+}
+
+.card-elevated {
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+}
+
+/* ── macOS-style modal open animation ── */
+@keyframes macos-backdrop-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes macos-modal-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.45) translateY(12px);
+    filter: blur(8px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(1px);
+  }
+  75% {
+    transform: scale(1.02) translateY(-2px);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes macos-modal-out {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.55) translateY(8px);
+    filter: blur(6px);
+  }
+}
+
+.macos-backdrop {
+  animation: macos-backdrop-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.macos-modal {
+  animation: macos-modal-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  transform-origin: center center;
+}
+
+.macos-modal-closing {
+  animation: macos-modal-out 0.2s cubic-bezier(0.4, 0, 1, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .macos-backdrop,
+  .macos-modal,
+  .macos-modal-closing {
+    animation: none;
+  }
+}
+
+/* Smooth transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── CSS 3D Hero Shapes ── */
+.hero-grad-start-slate { stop-color: #334155; }
+.hero-grad-end-slate { stop-color: #64748b; }
+.hero-grad-start-blue { stop-color: #2563eb; }
+.hero-grad-end-blue { stop-color: #60a5fa; }
+.hero-grad-end-light { stop-color: #e2e8f0; stop-opacity: 0.6; }
+.hero-grad-start-sky { stop-color: #0284c7; }
+.hero-grad-end-sky { stop-color: #38bdf8; }
+.hero-wireframe { stroke: #94a3b8; }
+.hero-dot-primary { fill: #2563eb; }
+.hero-dot-secondary { fill: #334155; }
+
+@keyframes hero-spin-1 {
+  from { transform: rotate3d(1, 1, 0, 0deg); }
+  to   { transform: rotate3d(1, 1, 0, 360deg); }
+}
+@keyframes hero-spin-2 {
+  from { transform: rotate3d(0, 1, 1, 0deg); }
+  to   { transform: rotate3d(0, 1, 1, 360deg); }
+}
+@keyframes hero-spin-3 {
+  from { transform: rotate3d(1, 0, 1, 0deg); }
+  to   { transform: rotate3d(1, 0, 1, 360deg); }
+}
+@keyframes hero-spin-4 {
+  from { transform: rotate3d(1, 1, 0.5, 0deg); }
+  to   { transform: rotate3d(1, 1, 0.5, 360deg); }
+}
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-12px) scale(1.05); }
+}
+
+.hero-shape {
+  will-change: transform;
+  filter: blur(0.3px);
+}
+
+@media (max-width: 767px) {
+  .hero-shape {
+    transform: scale(0.7);
+  }
+}
+
+/* ── Dark Mode ── */
+:root {
+  --bg-surface: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-elevated: #ffffff;
+  --bg-input: #ffffff;
+  --bg-pill: rgba(255, 255, 255, 0.85);
+  --bg-pill-active: #0f172a;
+  --bg-tag: #f1f5f9;
+  --bg-tag-accent: #eff6ff;
+  --border-primary: #e2e8f0;
+  --border-subtle: #f1f5f9;
+  --border-hover: #cbd5e1;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-inverted: #ffffff;
+  --accent-blue: #2563eb;
+  --accent-emerald: #059669;
+  --accent-indigo: #4f46e5;
+  --modal-overlay: rgba(15, 23, 42, 0.5);
+  --grid-dot: rgba(148, 163, 184, 0.28);
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
+}
+
+:root[data-theme="dark"] {
+  --bg-surface: #0f172a;
+  --bg-card: #1e293b;
+  --bg-card-hover: #334155;
+  --bg-elevated: #1e293b;
+  --bg-input: #1e293b;
+  --bg-pill: rgba(30, 41, 59, 0.85);
+  --bg-pill-active: #e2e8f0;
+  --bg-tag: #334155;
+  --bg-tag-accent: #1e3a5f;
+  --border-primary: #334155;
+  --border-subtle: #1e293b;
+  --border-hover: #475569;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-inverted: #0f172a;
+  --accent-blue: #3b82f6;
+  --accent-emerald: #10b981;
+  --accent-indigo: #818cf8;
+  --modal-overlay: rgba(0, 0, 0, 0.7);
+  --grid-dot: rgba(148, 163, 184, 0.1);
+  --scrollbar-thumb: #475569;
+  --scrollbar-thumb-hover: #64748b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-surface: #0f172a;
+    --bg-card: #1e293b;
+    --bg-card-hover: #334155;
+    --bg-elevated: #1e293b;
+    --bg-input: #1e293b;
+    --bg-pill: rgba(30, 41, 59, 0.85);
+    --bg-pill-active: #e2e8f0;
+    --bg-tag: #334155;
+    --bg-tag-accent: #1e3a5f;
+    --border-primary: #334155;
+    --border-subtle: #1e293b;
+    --border-hover: #475569;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --text-inverted: #0f172a;
+    --accent-blue: #3b82f6;
+    --accent-emerald: #10b981;
+    --accent-indigo: #818cf8;
+    --modal-overlay: rgba(0, 0, 0, 0.7);
+    --grid-dot: rgba(148, 163, 184, 0.1);
+    --scrollbar-thumb: #475569;
+    --scrollbar-thumb-hover: #64748b;
+  }
+
+  :root:not([data-theme="light"]) .hero-grad-start-slate { stop-color: #94a3b8; }
+  :root:not([data-theme="light"]) .hero-grad-end-slate { stop-color: #64748b; }
+  :root:not([data-theme="light"]) .hero-grad-start-blue { stop-color: #3b82f6; }
+  :root:not([data-theme="light"]) .hero-grad-end-blue { stop-color: #93c5fd; }
+  :root:not([data-theme="light"]) .hero-grad-end-light { stop-color: #475569; stop-opacity: 0.4; }
+  :root:not([data-theme="light"]) .hero-grad-start-sky { stop-color: #0ea5e9; }
+  :root:not([data-theme="light"]) .hero-grad-end-sky { stop-color: #7dd3fc; }
+  :root:not([data-theme="light"]) .hero-wireframe { stroke: #64748b; }
+  :root:not([data-theme="light"]) .hero-dot-primary { fill: #3b82f6; }
+  :root:not([data-theme="light"]) .hero-dot-secondary { fill: #94a3b8; }
+}
+
+:root[data-theme="dark"] .hero-grad-start-slate { stop-color: #94a3b8; }
+:root[data-theme="dark"] .hero-grad-end-slate { stop-color: #64748b; }
+:root[data-theme="dark"] .hero-grad-start-blue { stop-color: #3b82f6; }
+:root[data-theme="dark"] .hero-grad-end-blue { stop-color: #93c5fd; }
+:root[data-theme="dark"] .hero-grad-end-light { stop-color: #475569; stop-opacity: 0.4; }
+:root[data-theme="dark"] .hero-grad-start-sky { stop-color: #0ea5e9; }
+:root[data-theme="dark"] .hero-grad-end-sky { stop-color: #7dd3fc; }
+:root[data-theme="dark"] .hero-wireframe { stroke: #64748b; }
+:root[data-theme="dark"] .hero-dot-primary { fill: #3b82f6; }
+:root[data-theme="dark"] .hero-dot-secondary { fill: #94a3b8; }
