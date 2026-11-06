@@ -140,6 +140,69 @@ body {
   }
 }
 
+/* ── Tech Cursor ── */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+.tech-cursor-dot,
+.tech-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+}
+
+.tech-cursor-dot {
+  margin-left: -4px;
+  margin-top: -4px;
+}
+
+.tech-cursor-dot-inner {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  box-shadow: 0 0 8px var(--accent-blue), 0 0 20px rgba(37, 99, 235, 0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tech-cursor-dot-inner.tech-cursor-click {
+  transform: scale(0.6);
+  box-shadow: 0 0 12px var(--accent-blue), 0 0 30px rgba(37, 99, 235, 0.5);
+}
+
+.tech-cursor-ring {
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+.tech-cursor-ring-inner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent-blue);
+  opacity: 0.4;
+  transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.tech-cursor-ring-inner.tech-cursor-ring-click {
+  transform: scale(0.7);
+  opacity: 0.8;
+  border-color: var(--accent-emerald);
+}
+
+@media (pointer: coarse) {
+  .tech-cursor-dot,
+  .tech-cursor-ring {
+    display: none;
+  }
+}
+
 /* Smooth transitions */
 html {
   scroll-behavior: smooth;

@@ -12,6 +12,7 @@ import { ArchitectureDetailModal } from "@/components/ArchitectureDetailModal";
 import { FullPageSections } from "@/components/FullPageSections";
 import { Toast } from "@/components/Toast";
 import { BottomTabs } from "@/components/BottomTabs";
+import { TechCursor } from "@/components/TechCursor";
 
 function PortfolioContent() {
   const { viewMode } = usePortfolio();
@@ -33,6 +34,7 @@ function PortfolioContent() {
       <ArchitectureDetailModal />
       <Toast />
       <BottomTabs />
+      <TechCursor />
     </div>
   );
 }
