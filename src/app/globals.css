@@ -203,9 +203,14 @@ body {
   }
 }
 
-/* Smooth transitions */
+/* Hide scrollbar globally */
 html {
   scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 /* ── CSS 3D Hero Shapes ── */

@@ -6,16 +6,20 @@ import { portfolioData } from "@/data/portfolioData";
 import { Layers, Briefcase, Mail, Download } from "lucide-react";
 
 export const Hero: React.FC = () => {
-  const { locale, openModal } = usePortfolio();
+  const { locale, openModal, viewMode } = usePortfolio();
   const { personalInfo, projects } = portfolioData;
 
   return (
     <main
       id="main-content"
-      className="relative z-20 w-full max-w-5xl mx-auto px-4 sm:px-6 my-auto py-8 sm:py-12 flex flex-col items-center text-center select-text"
+      className={`relative z-20 w-full max-w-5xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center select-text ${
+        viewMode === "studio"
+          ? "my-auto py-4 sm:py-6 overflow-y-auto"
+          : "my-auto py-8 sm:py-12"
+      }`}
     >
       {/* Experience Status Pill */}
-      <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[var(--bg-pill)] backdrop-blur-md border border-[var(--border-primary)] shadow-2xs mb-6 transition-all hover:scale-[1.02] hover:border-[var(--border-hover)]">
+      <div className={`inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[var(--bg-pill)] backdrop-blur-md border border-[var(--border-primary)] shadow-2xs transition-all hover:scale-[1.02] hover:border-[var(--border-hover)] ${viewMode === "studio" ? "mb-3" : "mb-6"}`}>
         <span className="relative flex h-2 w-2">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--accent-emerald)]"></span>
@@ -42,12 +46,12 @@ export const Hero: React.FC = () => {
       </h1>
 
       {/* Precision Tagline */}
-      <p className="text-base sm:text-lg text-[var(--text-muted)] max-w-2xl mt-6 font-normal leading-relaxed">
+      <p className={`text-base sm:text-lg text-[var(--text-muted)] max-w-2xl font-normal leading-relaxed ${viewMode === "studio" ? "mt-3" : "mt-6"}`}>
         {personalInfo.tagline[locale]}
       </p>
 
       {/* Action Pills */}
-      <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mt-8 max-w-2xl">
+      <div className={`flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 max-w-2xl ${viewMode === "studio" ? "mt-4" : "mt-8"}`}>
         <button
           onClick={() => openModal("tab-projets")}
           className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--bg-pill-active)] text-[var(--text-inverted)] text-xs sm:text-sm font-medium hover:opacity-90 transition-all shadow-sm hover:shadow-md cursor-pointer"

@@ -20,7 +20,7 @@ function PortfolioContent() {
   return (
     <div
       className={`min-h-screen w-full bg-[var(--bg-surface)] text-[var(--text-primary)] antialiased tech-grid-pattern relative flex flex-col justify-between overflow-x-hidden ${
-        viewMode === "studio" ? "h-screen overflow-hidden" : "h-auto"
+        viewMode === "studio" ? "h-screen overflow-y-auto overflow-x-hidden" : "h-auto"
       }`}
     >
       <CSSHeroCanvas />
