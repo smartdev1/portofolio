@@ -170,17 +170,17 @@ export interface PortfolioData {
 
 export const portfolioData: PortfolioData = {
   personalInfo: {
-    fullName: "ARISTIDE GHISLAIN ADOUKO",
+    fullName: "ADOUKO AKICHI ARISTIDE GHISLAIN",
     preferredName: "ARISTIDE",
     initials: "AA",
     title: {
-      fr: "Solutions Architect & Lead Dev",
-      en: "Solutions Architect & Lead Developer"
+      fr: "Développeur Web Full-Stack",
+      en: "Full-Stack Web Developer"
     },
     experienceYears: "8+",
     badge: {
-      fr: "8+ ans d'expérience · Solutions Architect & Lead Dev",
-      en: "8+ years experience · Solutions Architect & Lead Dev"
+      fr: "8+ ans d'expérience · Développeur Full-Stack",
+      en: "8+ years experience · Full-Stack Developer"
     },
     greeting: {
       fr: "BONJOUR, JE SUIS",
@@ -195,24 +195,71 @@ export const portfolioData: PortfolioData = {
       en: "BUT YOU CAN CALL ME"
     },
     tagline: {
-      fr: "Concepteur de Solutions Logicielles, Développeur Web Full-Stack & UI Architect basé à Abidjan.",
-      en: "Software Solutions Architect, Full-Stack Web Developer & UI Architect based in Abidjan."
+      fr: "Développeur Web Full-Stack · Laravel · Angular · Vue.js / Nuxt.js · Basé à Abidjan.",
+      en: "Full-Stack Web Developer · Laravel · Angular · Vue.js / Nuxt.js · Based in Abidjan."
     },
     status: {
-      fr: "Disponible pour missions d'ingénierie & CDI",
-      en: "Available for engineering missions & Full-Time contracts"
+      fr: "Disponible pour missions & CDI",
+      en: "Available for contracts & full-time roles"
     },
-    location: "Abidjan, Côte d'Ivoire",
+    location: "Cocody Riviera, Abidjan",
     email: "aristide.adouko@epitech.eu",
-    phone: "+2250787587406",
-    phoneFormatted: "+225 07 87 58 74 06",
-    whatsappUrl: "https://wa.me/2250787587406",
+    phone: "+2250787587877",
+    phoneFormatted: "+225 07 87 58 78 77",
+    whatsappUrl: "https://wa.me/2250787587877",
     githubUrl: "https://github.com/smartdev1",
-    linkedinUrl: "https://linkedin.com/in/aristide-adouko",
+    linkedinUrl: "https://linkedin.com/in/aristide-ghislain-adouko",
     cvUrl: "/cv-aristide-adouko.pdf",
     avatarUrl: "/avatar.jpg"
   },
   projects: [
+    {
+      id: "assurland-crm",
+      title: "CRM Assurland Africa",
+      organization: "ASSURLAND AFRICA · ABIDJAN",
+      period: "Juil. 2026 - Présent",
+      category: {
+        fr: "FINTECH & ASSURANCE",
+        en: "INSURTECH & FINTECH"
+      },
+      metric: {
+        fr: "4 modules métier",
+        en: "4 Business Modules"
+      },
+      description: {
+        fr: "Développement du CRM de l'entreprise sous Laravel 11 et Angular 17 (équipe de 4 personnes). Initialisation du projet, implémentation de l'API Laravel et création des pages front-end.",
+        en: "Enterprise CRM development using Laravel 11 and Angular 17 (team of 4). Project initialization, Laravel API implementation, and front-end page creation."
+      },
+      technologies: ["Laravel 11", "Angular 17", "MySQL", "REST API", "TypeScript", "Tailwind CSS"],
+      role: {
+        fr: "Développeur Web",
+        en: "Web Developer"
+      },
+      architectureDetails: {
+        challenge: {
+          fr: "Concevoir un CRM complet couvrant les modules Opportunités, Offres, Scoring, Contacts et Comptes clients pour le secteur de l'assurance, avec une API robuste et un front-end performant.",
+          en: "Design a comprehensive CRM covering Opportunities, Offers, Scoring, Contacts and Client Accounts modules for the insurance sector, with a robust API and performant front-end."
+        },
+        solution: {
+          fr: "Architecture découplée avec API REST Laravel 11 et front-end Angular 17. Modules métier isolés avec gestion des droits et workflows de validation.",
+          en: "Decoupled architecture with Laravel 11 REST API and Angular 17 front-end. Isolated business modules with role-based access control and validation workflows."
+        },
+        highlights: {
+          fr: [
+            "Implémentation des modules Opportunités, Offres, Scoring, Contacts et Comptes clients",
+            "API REST structurée avec validation et gestion des permissions",
+            "Interface Angular responsive avec composants réutilisables"
+          ],
+          en: [
+            "Implementation of Opportunities, Offers, Scoring, Contacts and Client Accounts modules",
+            "Structured REST API with validation and permission management",
+            "Responsive Angular interface with reusable components"
+          ]
+        },
+        database: "MySQL",
+        pattern: "MVC & REST API Architecture"
+      }
+    },
     {
       id: "hakeyo",
       title: "Hakeyo — Plateforme de traçabilité des diffusions musicales",
@@ -227,8 +274,8 @@ export const portfolioData: PortfolioData = {
         en: "+45 Live Radios Monitored"
       },
       description: {
-        fr: "Système d'écoute et de monitoring automatisé des flux médias pour le calcul et la répartition équitable des droits d'auteur. Algorithmes d'empreinte audio et tableaux de bord analytiques temps réel.",
-        en: "Automated media stream monitoring and listening system for copyright calculation and fair distribution. Audio fingerprinting algorithms and real-time analytical dashboards."
+        fr: "Plateforme technologique de reconnaissance et de traçabilité des diffusions musicales dans les lieux publics, pour faciliter le versement des royalties aux artistes ivoiriens.",
+        en: "Technology platform for recognition and tracking of music broadcasts in public venues, facilitating royalty payments to Ivorian artists."
       },
       technologies: ["Laravel 10", "Vue.js 3", "Python Audio DSP", "MySQL", "Redis", "FFmpeg", "Docker"],
       role: {
@@ -262,8 +309,8 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: "saint-mathieu",
-      title: "Application de Gestion Médicale — Clinique Saint Mathieu",
-      organization: "SYSTÈME DE SANTÉ & ERP · YOPOUGON",
+      title: "Application de Gestion — Clinique Saint Mathieu",
+      organization: "CLINIQUE SAINT MATHIEU · YOPOUGON",
       period: "2022 - 2023",
       category: {
         fr: "SANTÉ & SYSTÈMES CRITIQUES",
@@ -271,25 +318,25 @@ export const portfolioData: PortfolioData = {
       },
       metric: {
         fr: "100% Dématérialisé",
-        en: "100% Paperless Hospital"
+        en: "100% Paperless"
       },
       description: {
-        fr: "Logiciel intégral de gestion hospitalière : dossiers médicaux dématérialisés, gestion du bloc et des lits, facturation tiers-payant, pharmacie interne et planification des consultations.",
-        en: "Comprehensive hospital management software: digitized electronic health records, operating room and bed management, insurance third-party billing, pharmacy inventory, and appointments."
+        fr: "Développement de l'application de gestion de la clinique : dossiers médicaux, facturation, pharmacie interne et planification des consultations.",
+        en: "Development of the clinic management application: medical records, billing, in-house pharmacy and appointment scheduling."
       },
-      technologies: ["Laravel Framework", "Livewire & Tailwind", "Windev Data Bridge", "MySQL", "PostgreSQL", "Audit Trail"],
+      technologies: ["Laravel", "Livewire", "Tailwind CSS", "MySQL", "Windev Data Bridge"],
       role: {
         fr: "Architecte Concepteur & Développeur Principal",
         en: "System Architect & Principal Developer"
       },
       architectureDetails: {
         challenge: {
-          fr: "Moderniser un système hospitalier existant sous Windev sans interruption de service, en garantissant la confidentialité médicale stricte (HDS/RGPD) et la continuité 24h/7j.",
+          fr: "Moderniser un système hospitalier existant sous Windev sans interruption de service, en garantissant la confidentialité médicale stricte et la continuité 24h/7j.",
           en: "Modernize a legacy hospital system previously on Windev without downtime, enforcing strict health data privacy standards and 24/7 mission-critical uptime."
         },
         solution: {
-          fr: "Conception d'une passerelle hybride (Data Bridge) assurant une synchronisation bidirectionnelle fluide entre les bases Windev historiques et la nouvelle interface web réactive Laravel Livewire.",
-          en: "Designed a fault-tolerant hybrid Data Bridge enabling seamless two-way replication between historical Windev databases and a responsive, secure Laravel Livewire interface."
+          fr: "Conception d'une passerelle hybride (Data Bridge) assurant une synchronisation bidirectionnelle entre les bases Windev historiques et la nouvelle interface web Laravel Livewire.",
+          en: "Designed a hybrid Data Bridge enabling seamless two-way replication between historical Windev databases and a responsive Laravel Livewire interface."
         },
         highlights: {
           fr: [
@@ -300,7 +347,7 @@ export const portfolioData: PortfolioData = {
           en: [
             "Real-time bed management across 120+ hospital beds and 8 medical specialties",
             "70% reduction in insurance pre-authorization and claims handling processing time",
-            "Complete cryptographic audit trail for prescriptions and in-house pharmacy deliveries"
+            "Complete audit trail for prescriptions and in-house pharmacy deliveries"
           ]
         },
         database: "MySQL & HyperFileSQL Interop Bridge",
@@ -309,56 +356,57 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: "official-plugins",
-      title: "Extensions Officielles — WooTour & MotoPress Hotel Booking",
-      organization: "ECOSYSTÈME & PLUGINS · WORDPRESS ENGINE",
+      title: "Extensions WooTour & MotoPress Hotel Booking",
+      organization: "WORDPRESS · PLUGINS OFFICIELS",
       period: "2021 - 2023",
       category: {
-        fr: "FINTECH & E-COMMERCE",
-        en: "FINTECH & E-COMMERCE"
+        fr: "E-COMMERCE & TOURISME",
+        en: "E-COMMERCE & TOURISM"
       },
       metric: {
         fr: "Production Globale",
-        en: "Global Production Deployed"
+        en: "Global Production"
       },
       description: {
-        fr: "Développement de passerelles personnalisées, modules de paiement panafricains (Wave, Mobile Money) et synchronisations d'inventaires pour les acteurs hôteliers internationaux.",
-        en: "Development of custom payment gateways, Pan-African mobile money integrations (Wave, MTN, Orange, Moov) and multi-channel inventory synchronization for international hotel chains."
+        fr: "Extension du plugin officiel WooTour : édition massive des disponibilités sans modifier le cœur du plugin. Extension MotoPress Hotel Booking : ajout des réservations à l'heure au plugin de réservation hôtelière.",
+        en: "WooTour official plugin extension: bulk availability editing without modifying the plugin core. MotoPress Hotel Booking extension: hourly reservations added to the hotel booking plugin."
       },
-      technologies: ["PHP 8+", "WooCommerce Core", "Payment Webhooks", "REST APIs", "OAuth 2.0", "iCal Sync"],
+      technologies: ["PHP 8+", "WooCommerce", "WordPress Hooks", "REST APIs", "iCal Sync"],
+      link: "https://www.instinctvertical.com",
       role: {
-        fr: "Core Plugin Engineer & Payment Specialist",
-        en: "Core Plugin Engineer & Payment Specialist"
+        fr: "Core Plugin Engineer",
+        en: "Core Plugin Engineer"
       },
       architectureDetails: {
         challenge: {
-          fr: "Permettre aux établissements touristiques d'Afrique subsaharienne de recevoir instantanément des réservations garanties via les réseaux Mobile Money tout en évitant les surréservations.",
-          en: "Enable tourism operators and hotels across Sub-Saharan Africa to accept instant secured reservations through local Mobile Money rails without double-booking."
+          fr: "Étendre les fonctionnalités de plugins officiels WordPress sans modifier leur cœur, tout en assurant la compatibilité avec les mises à jour futures.",
+          en: "Extend official WordPress plugin functionality without modifying their core, while ensuring compatibility with future updates."
         },
         solution: {
-          fr: "Création de modules de paiement conformes aux standards PSR et API WooCommerce avec gestion idempotente des webhooks et synchronisation bi-directionnelle iCal temps réel.",
-          en: "Engineered PSR-compliant payment modules and WooCommerce hook integrations featuring idempotent webhook verification and real-time bidirectional iCal availability sync."
+          fr: "Utilisation des hooks et filtres WordPress pour injecter les fonctionnalités additionnelles. Architecture d'extension conforme aux standards PSR et API WooCommerce.",
+          en: "Leveraged WordPress hooks and filters to inject additional functionality. Extension architecture compliant with PSR standards and WooCommerce API."
         },
         highlights: {
           fr: [
-            "Support natif des devises XOF, XAF, EUR, USD avec conversion dynamique",
-            "Gestion des pannes réseaux avec système de relance exponentielle des notifications",
-            "Adoption par de nombreux complexes hôteliers et agences de voyages de référence"
+            "Édition massive des disponibilités WooTour sans toucher au cœur du plugin",
+            "Ajout des réservations à l'heure au plugin MotoPress Hotel Booking",
+            "Compatibilité maintenue avec les mises à jour officielles des plugins"
           ],
           en: [
-            "Native multi-currency support (XOF, XAF, EUR, USD) with dynamic real-time exchange rates",
-            "Network resilience featuring exponential backoff retries for transactional notifications",
-            "Adopted across premier hotel resorts, eco-lodges, and regional tour operators"
+            "Bulk availability editing for WooTour without touching the plugin core",
+            "Hourly reservation support added to MotoPress Hotel Booking",
+            "Compatibility maintained with official plugin updates"
           ]
         },
         database: "WordPress Relational Schema & Custom Tables",
-        pattern: "Plugin Hook Architecture, Idempotent Webhook Handlers"
+        pattern: "Plugin Hook Architecture"
       }
     },
     {
       id: "intranet-lps",
       title: "Intranet du Lycée Professionnel Sectoriel de Yopougon",
-      organization: "FORMATION & EPITECH · ABIDJAN",
-      period: "2023 - 2024",
+      organization: "CODING ACADEMY BY EPITECH · PROJET DE FIN D'ÉTUDES",
+      period: "2024",
       category: {
         fr: "EDTECH & ENTERPRISE",
         en: "EDTECH & ENTERPRISE"
@@ -368,322 +416,338 @@ export const portfolioData: PortfolioData = {
         en: "1,200+ Active Users"
       },
       description: {
-        fr: "Conception d'une plateforme sécurisée de suivi pédagogique : diffusion des cours, registre des présences biométriques, relevés automatisés et messagerie institutionnelle.",
-        en: "Architected a secure academic lifecycle platform: course dissemination, biometric attendance tracking, automated report card generation, and institutional communications."
+        fr: "Plateforme d'échange de fichiers, de gestion administrative et de suivi des étudiants lors des inscriptions : gestion des utilisateurs, filtres et recherche dynamique en JavaScript.",
+        en: "File sharing platform, administrative management and student tracking during enrollment: user management, filters and dynamic JavaScript search."
       },
-      technologies: ["NestJS", "Angular 17", "PostgreSQL", "TypeORM", "WebSockets", "Docker"],
+      technologies: ["Laravel", "JavaScript", "GitHub", "Trello", "Agile"],
       role: {
-        fr: "Architecte Full-Stack & Lead Pédagogique",
-        en: "Full-Stack Architect & Technical Lead"
+        fr: "Développeur Full-Stack",
+        en: "Full-Stack Developer"
       },
       architectureDetails: {
         challenge: {
-          fr: "Fédérer les flux administratifs, enseignants et étudiants avec des contrôles d'accès stricts (RBAC) et une synchronisation biométrique des entrées/sorties en atelier technique.",
-          en: "Unify administrative, pedagogical, and student workflows with fine-grained RBAC and automated hardware synchronization with campus biometric attendance sensors."
+          fr: "Fédérer les flux administratifs, enseignants et étudiants avec des contrôles d'accès stricts et une gestion efficace des inscriptions et du suivi pédagogique.",
+          en: "Unify administrative, teaching, and student workflows with strict access controls and efficient enrollment and academic tracking management."
         },
         solution: {
-          fr: "Architecture microservices avec backend NestJS modulaire, WebSockets pour les notifications instantanées et frontend Angular 17 en composants autonomes (Standalone Components).",
-          en: "Microservice-ready architecture with modular NestJS backend, WebSockets for push notifications, and Angular 17 standalone components with state management."
+          fr: "Application Laravel avec gestion des rôles, échange de fichiers sécurisé et recherche dynamique côté client en JavaScript pour une expérience fluide.",
+          en: "Laravel application with role management, secure file sharing, and client-side dynamic JavaScript search for a smooth experience."
         },
         highlights: {
           fr: [
-            "Génération instantanée de bulletins scolaires sécurisés par QR Code infalsifiable",
-            "Temps de réponse de l'API inférieur à 65ms sur les requêtes lourdes d'évaluation",
-            "Système de notification SMS/Email automatisé vers les parents d'élèves"
+            "Gestion complète des utilisateurs avec rôles et permissions",
+            "Système d'échange de fichiers sécurisé entre administration et étudiants",
+            "Filtres et recherche dynamique en JavaScript pour le suivi des inscriptions"
           ],
           en: [
-            "Instant tamper-proof report card generation backed by cryptographically signed QR codes",
-            "API response times under 65ms for complex multidimensional grading queries",
-            "Automated parent notification engine via SMS and transactional email gateways"
+            "Complete user management with roles and permissions",
+            "Secure file exchange system between administration and students",
+            "Dynamic JavaScript filters and search for enrollment tracking"
           ]
         },
-        database: "PostgreSQL 15 (ACID Compliant)",
-        pattern: "Clean Architecture, CQRS & Dependency Injection"
+        database: "MySQL",
+        pattern: "MVC Architecture, Agile/Kanban"
       }
     },
     {
       id: "fatom",
-      title: "Portail Numérique Institutionnel de la FATOM",
-      organization: "ONG & PHILANTHROPIE · FONDATION ATOM OMAÏS",
-      period: "2022 - 2023",
+      title: "Site web de la FATOM (Fondation ATOM OMAÏS)",
+      organization: "FREELANCE · FONDATION ATOM OMAÏS",
+      period: "2022",
       category: {
-        fr: "IMPACT SOCIAL & FINTECH",
-        en: "SOCIAL IMPACT & FINTECH"
+        fr: "IMPACT SOCIAL & ONG",
+        en: "SOCIAL IMPACT & NGO"
       },
       metric: {
         fr: "Afrique de l'Ouest",
         en: "West Africa Region"
       },
       description: {
-        fr: "Plateforme web d'impact social pour la vulgarisation d'actions sanitaires infantiles, bourses éducatives et passerelle de dons transparents et certifiés.",
-        en: "High-impact non-profit portal highlighting pediatric healthcare missions, academic scholarships, and a transparent certified donation gateway for corporate and individual patrons."
+        fr: "Intégration, refonte graphique et optimisation de l'ergonomie et de l'accessibilité du site de la fondation.",
+        en: "Integration, graphic redesign and optimization of the foundation website's ergonomics and accessibility."
       },
-      technologies: ["Nuxt.js", "Node.js API", "Audit PCI-DSS", "Tailwind CSS", "Stripe", "Mobile Money"],
+      technologies: ["Vue.js", "WordPress", "Tailwind CSS"],
+      link: "https://www.fatom.org",
       role: {
-        fr: "Directeur Technique & Frontend Architect",
-        en: "Technical Director & Frontend Architect"
+        fr: "Développeur Frontend & Intégrateur",
+        en: "Frontend Developer & Integrator"
       },
       architectureDetails: {
         challenge: {
-          fr: "Créer une vitrine institutionnelle internationale à fort impact émotionnel, tout en intégrant un système de collecte de dons ultra-sécurisé conforme aux exigences PCI-DSS.",
-          en: "Create a world-class institutional showcase with strong brand identity while embedding a bank-grade secure donation processing system meeting PCI-DSS mandates."
+          fr: "Créer une vitrine institutionnelle internationale à fort impact, avec une ergonomie optimisée pour les visiteurs et une accessibilité conforme aux standards.",
+          en: "Create a high-impact international institutional showcase, with optimized ergonomics for visitors and standards-compliant accessibility."
         },
         solution: {
-          fr: "Développement en Nuxt.js SSR avec optimisation SEO maximale, passerelles bancaires chiffrées de bout en bout et publication automatisée des bilans financiers d'actions.",
-          en: "Built on Nuxt.js SSR with state-of-the-art SEO and Core Web Vitals optimization, end-to-end encrypted banking conduits, and public transparency audit dashboards."
+          fr: "Refonte complète du site sous Vue.js et WordPress avec optimisation SEO, performances mobile et accessibilité.",
+          en: "Complete website redesign using Vue.js and WordPress with SEO optimization, mobile performance and accessibility."
         },
         highlights: {
           fr: [
-            "Score de performance Google Lighthouse 98/100 sur mobile et desktop",
-            "Délivrance automatique des reçus fiscaux certifiés par signature électronique",
-            "Couverture médiatique dans 4 pays d'Afrique de l'Ouest pour les campagnes de dons"
+            "Refonte graphique complète avec amélioration de l'ergonomie",
+            "Optimisation de l'accessibilité conforme aux standards WCAG",
+            "Performance mobile optimisée pour les réseaux à faible débit"
           ],
           en: [
-            "Google Lighthouse performance score of 98/100 across mobile and desktop devices",
-            "Automated tax-deductible receipt generation with digital certificate signing",
-            "Deployed across 4 West African countries for international donation campaigns"
+            "Complete graphic redesign with improved ergonomics",
+            "Accessibility optimization compliant with WCAG standards",
+            "Mobile performance optimized for low-bandwidth networks"
           ]
         },
-        database: "PostgreSQL & Encrypted Vault",
-        pattern: "SSR / Jamstack Hybrid with Serverless Functions"
+        database: "WordPress MySQL",
+        pattern: "Jamstack Hybrid & WordPress CMS"
       }
     }
   ],
   skillCategories: [
     {
-      id: "backend",
+      id: "frontend",
       code: "CORE 01",
       title: {
-        fr: "Backend Engineering",
-        en: "Backend Engineering"
-      },
-      description: {
-        fr: "Architectures monolithiques & microservices fiables, conformes aux standards PSR, MVC et Clean Architecture.",
-        en: "Resilient monolithic & microservices architectures, strictly adhering to PSR standards, MVC, and Clean Architecture."
-      },
-      icon: "terminal",
-      featured: ["Laravel 11", "PHP 8.x", "Node.js (NestJS)", "Express.js"],
-      skills: ["Laravel 11", "PHP 8.x", "Node.js (NestJS)", "Express.js", "Python", "Windev", "RESTful APIs", "Microservices", "Clean Architecture", "OOP / SOLID"]
-    },
-    {
-      id: "frontend",
-      code: "CORE 02",
-      title: {
-        fr: "Frontend & SPAs",
-        en: "Frontend & SPAs"
+        fr: "Front-end",
+        en: "Front-end"
       },
       description: {
         fr: "Interfaces interactives à haute performance, design systems rigoureux et composants modulaires maintenables.",
         en: "High-performance interactive interfaces, rigorous design systems, and modular, maintainable component architectures."
       },
       icon: "web",
-      featured: ["Angular 17", "Vue 3 / Nuxt", "React", "Next.js"],
-      skills: ["Angular 17", "Vue 3 / Nuxt", "React", "Next.js", "TypeScript", "Tailwind CSS", "Three.js", "HTML5 / SCSS", "State Management", "UI/UX Architecture"]
+      featured: ["Angular", "Vue.js", "Nuxt.js", "React"],
+      skills: ["Angular", "Vue.js", "Nuxt.js", "React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5 / SCSS", "JavaScript", "State Management"]
     },
     {
-      id: "data-mobile",
-      code: "CORE 03",
+      id: "backend",
+      code: "CORE 02",
       title: {
-        fr: "Données & Mobile",
-        en: "Databases & Mobile"
+        fr: "Back-end",
+        en: "Back-end"
       },
       description: {
-        fr: "Persistance relationnelle et NoSQL optimisée, indexation fine et applications multiplateformes résilientes.",
-        en: "Optimized relational & NoSQL persistence, deep query indexing, and resilient cross-platform mobile solutions."
+        fr: "Architectures robustes, APIs RESTful et microservices fiables, conformes aux standards PSR et Clean Architecture.",
+        en: "Robust architectures, RESTful APIs and reliable microservices, adhering to PSR standards and Clean Architecture."
+      },
+      icon: "terminal",
+      featured: ["Laravel / PHP", "Node.js (Express, NestJS)", "Python (Flask, Django)", "Windev"],
+      skills: ["Laravel / PHP", "Node.js (Express, NestJS)", "Python (Flask, Django)", "Windev", "RESTful APIs", "Microservices", "Clean Architecture", "OOP / SOLID"]
+    },
+    {
+      id: "mobile",
+      code: "CORE 03",
+      title: {
+        fr: "Mobile",
+        en: "Mobile"
+      },
+      description: {
+        fr: "Applications multiplateformes performantes avec des frameworks modernes.",
+        en: "Performant cross-platform mobile applications with modern frameworks."
+      },
+      icon: "smartphone",
+      featured: ["Flutter", "React Native", "Ionic"],
+      skills: ["Flutter", "React Native", "Ionic"]
+    },
+    {
+      id: "data",
+      code: "CORE 04",
+      title: {
+        fr: "Bases de données",
+        en: "Databases"
+      },
+      description: {
+        fr: "Persistance relationnelle et NoSQL optimisée, indexation fine et modélisation de données.",
+        en: "Optimized relational & NoSQL persistence, query indexing, and data modeling."
       },
       icon: "database",
-      featured: ["PostgreSQL", "MySQL", "MongoDB", "Flutter"],
-      skills: ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "Redis", "Flutter", "React Native", "Query Tuning", "Data Modeling", "Cache Strategies"]
+      featured: ["MySQL", "MongoDB", "Firebase"],
+      skills: ["MySQL", "MongoDB", "Firebase", "PostgreSQL", "Redis", "Query Tuning", "Data Modeling"]
     },
     {
       id: "devops-methods",
-      code: "CORE 04",
+      code: "CORE 05",
       title: {
-        fr: "DevOps & Méthodes",
-        en: "DevOps & Methodology"
+        fr: "Outils & Méthodes",
+        en: "Tools & Methods"
       },
       description: {
-        fr: "Cycle de vie logiciel sous contrôle, pipelines CI/CD, serveurs Linux durcis et conduite de projet agile.",
-        en: "Full software lifecycle orchestration, automated CI/CD pipelines, hardened Linux servers, and agile delivery."
+        fr: "Gestion de version, intégration continue, serveurs Linux et conduite de projet agile.",
+        en: "Version control, continuous integration, Linux servers, and agile project management."
       },
       icon: "deployed_code",
-      featured: ["Git / Flow", "Linux / CentOS", "REST / OpenAPI", "Agile Scrum"],
-      skills: ["Git / GitHub Flow", "Linux / CentOS / Debian", "Docker", "REST / OpenAPI", "GraphQL", "Agile Scrum", "CI/CD Pipelines", "Code Review", "Nginx / Apache"]
+      featured: ["Git / GitHub", "Trello (Agile / Kanban)", "Linux (CentOS)", "WordPress"],
+      skills: ["Git / GitHub", "Trello (Agile / Kanban)", "Linux (CentOS)", "WordPress", "Docker", "Nginx / Apache", "CI/CD", "REST / OpenAPI"]
     }
   ],
   career: [
     {
       id: "assurland",
-      period: "2024 - Présent",
+      period: "Juil. 2026 – Présent",
       isCurrent: true,
       role: {
-        fr: "Développeur Web Full-Stack",
-        en: "Full-Stack Web Developer"
+        fr: "Développeur Web",
+        en: "Web Developer"
       },
-      company: "Assurland Africa",
+      company: "Assurland Africa, Abidjan",
       tag: {
-        fr: "POSTE ACTUEL · FINTECH ASSURANCE",
-        en: "CURRENT POSITION · INSURTECH"
+        fr: "POSTE ACTUEL · ASSURANCE",
+        en: "CURRENT POSITION · INSURANCE"
       },
       description: {
-        fr: "Pilotage et conception de solutions logicielles d'assurance. Refonte d'architectures sous Laravel 11 et Angular 17. Optimisation des processus de souscription et passerelles de courtage.",
-        en: "Steering and building enterprise insurance solutions. Modernizing legacy core architectures with Laravel 11 and Angular 17. Streamlining policy underwriting workflows and brokerage bridges."
+        fr: "Développement du CRM de l'entreprise sous Laravel 11 et Angular 17 (équipe de 4 personnes). Initialisation du projet, implémentation de l'API Laravel et création des pages front-end.",
+        en: "Enterprise CRM development using Laravel 11 and Angular 17 (team of 4). Project initialization, Laravel API implementation, and front-end page creation."
       },
       achievements: {
         fr: [
-          "Architecture de nouveaux modules de tarification automatisée en temps réel",
-          "Refactorisation du socle applicatif vers une architecture modulaire découplée",
-          "Interfaçage avec les compagnies d'assurance régionales partenaires"
+          "Initialisation du projet et mise en place de l'architecture technique",
+          "Implémentation de l'API Laravel et des pages front-end Angular",
+          "Périmètre : modules Opportunités, Offres, Scoring, Contacts et Comptes clients"
         ],
         en: [
-          "Architected real-time automated insurance rating and quote calculation engines",
-          "Refactored legacy monolith into high-efficiency decoupled modules",
-          "Integrated seamless API conduits with major Pan-African insurance underwriters"
+          "Project initialization and technical architecture setup",
+          "Laravel API implementation and Angular front-end pages",
+          "Scope: Opportunities, Offers, Scoring, Contacts and Client Accounts modules"
         ]
       }
     },
     {
       id: "epitech",
-      period: "2023 - 2024",
+      period: "Juin 2025 – Juil. 2026",
       role: {
-        fr: "Accompagnateur Pédagogique",
-        en: "Technical Pedagogical Mentor"
+        fr: "Accompagnateur Pédagogique Epitech",
+        en: "Epitech Pedagogical Mentor"
       },
-      company: "Epitech / African Education & Innovation",
+      company: "African Education and Innovation Group, Abidjan",
       tag: {
-        fr: "MENTORAT TECH & EXCELLENCE",
-        en: "TECH MENTORSHIP & EXCELLENCE"
+        fr: "MENTORAT & PÉDAGOGIE",
+        en: "MENTORSHIP & EDUCATION"
       },
       description: {
-        fr: "Encadrement technique intensif d'apprenants sur la pédagogie par projets : socles C, Python, revues de code rigoureuses, architectures logicielles et bonnes pratiques industrielles.",
-        en: "Intensive technical mentorship of software engineering fellows in project-based learning: low-level C programming, Python, strict code reviews, and enterprise best practices."
+        fr: "Soutien pédagogique aux étudiants en développement web (Laravel, Vue.js) : ateliers, séances de tutorat et suivi personnalisé des progrès.",
+        en: "Pedagogical support for web development students (Laravel, Vue.js): workshops, tutoring sessions and personalized progress tracking."
       },
       achievements: {
         fr: [
-          "Accompagnement de plus de 60 étudiants vers la réussite de leurs jurys techniques",
-          "Animation de workshops sur Clean Code, Git Flow et les design patterns modernes",
-          "Évaluation continue de la qualité du code et des performances algorithmiques"
+          "Ateliers et séances de tutorat en Laravel et Vue.js",
+          "Encadrement de projets web collaboratifs",
+          "Coordination avec les formateurs pour adapter les contenus pédagogiques"
         ],
         en: [
-          "Mentored 60+ engineering fellows to successful project defenses and certifications",
-          "Facilitated hands-on masterclasses on Clean Code, Git Flow, and GoF design patterns",
-          "Continuous review of algorithmic complexity, memory hygiene, and system architecture"
+          "Laravel and Vue.js workshops and tutoring sessions",
+          "Supervision of collaborative web projects",
+          "Coordination with trainers to adapt educational content"
         ]
       }
     },
     {
       id: "giz",
-      period: "2022 - 2023",
+      period: "Févr. 2025 – Juin 2025",
       role: {
         fr: "Stagiaire Développeur Web",
         en: "Web Developer Intern"
       },
-      company: "GIZ (Invest for Jobs / FORPRODE / IPNETP)",
+      company: "GIZ (Invest for Jobs), Abidjan",
       tag: {
         fr: "COOPÉRATION INTERNATIONALE",
         en: "INTERNATIONAL COOPERATION"
       },
       description: {
-        fr: "Création d'outils web pour le suivi de la formation professionnelle et l'insertion en entreprise des jeunes diplômés. Modélisation de bases de données et portails d'analyse.",
-        en: "Engineered web solutions for vocational training tracking and corporate placement of young technical graduates. Relational modeling and interactive analytical tracking portals."
+        fr: "Application de mise en relation apprenants / recruteurs (CVthèque) sous Laravel ; application du projet FORPRODE (Laravel, Nuxt.js). Conception du site du Lycée Professionnel Sectoriel de Yopougon ; refonte du site de l'IPNETP (WordPress, Vue.js).",
+        en: "Job matching application (CV database) connecting learners and recruiters using Laravel; FORPRODE project application (Laravel, Nuxt.js). Design of the Yopougon Vocational School website; IPNETP website redesign (WordPress, Vue.js)."
       },
       achievements: {
         fr: [
-          "Déploiement du portail d'insertion professionnelle reliant centres de formation et recruteurs",
-          "Automatisation du reporting statistique pour les bailleurs internationaux de la GIZ",
-          "Interface responsive moderne optimisée pour les débits mobiles à faible connectivité"
+          "Application CVthèque de mise en relation apprenants / recruteurs sous Laravel",
+          "Application du projet FORPRODE (Laravel, Nuxt.js)",
+          "Conception du site du Lycée Professionnel et refonte du site de l'IPNETP (WordPress, Vue.js)"
         ],
         en: [
-          "Deployed placement portal bridging vocational institutes and corporate hiring managers",
-          "Automated monthly statistical reporting for GIZ international project auditors",
-          "Engineered high-efficiency lightweight UI tuned for low-bandwidth mobile networks"
+          "CV database application connecting learners and recruiters using Laravel",
+          "FORPRODE project application (Laravel, Nuxt.js)",
+          "Vocational School website design and IPNETP website redesign (WordPress, Vue.js)"
         ]
       }
     },
     {
       id: "zenith",
-      period: "2020 - 2022",
+      period: "Juil. 2020 – Oct. 2020",
       role: {
         fr: "Responsable Production",
-        en: "Production Operations Lead"
+        en: "Production Manager"
       },
-      company: "Zenith Assurances",
+      company: "Zenith Assurances, Abidjan",
       tag: {
-        fr: "PRODUCTION & AUDIT",
-        en: "OPERATIONS & AUDIT"
+        fr: "GESTIONNAIRE SANTÉ",
+        en: "HEALTH INSURANCE"
       },
       description: {
-        fr: "Supervision de l'émission des contrats, fiabilisation des flux d'informations et automatisation des reportings. Contrôle qualité des opérations et sécurité des données de souscription.",
-        en: "Supervised contract issuance operations, reinforced integrity of critical transactional pipelines, and automated reporting systems. Quality assurance and underwriting data governance."
+        fr: "Développement d'une plateforme de gestion interne des assurés en PHP pour optimiser la gestion des informations clients et des processus internes.",
+        en: "Development of an internal insured persons management platform in PHP to optimize client information management and internal processes."
       },
       achievements: {
         fr: [
-          "Élimination des erreurs de ressaisie grâce à l'automatisation des ponts de données",
-          "Amélioration des délais de traitement des dossiers de souscription de 45%",
-          "Mise en place de tableaux de bord hebdomadaires pour la Direction Générale"
+          "Développement d'une plateforme de gestion interne des assurés en PHP",
+          "Optimisation de la gestion des informations clients",
+          "Amélioration des processus internes de traitement"
         ],
         en: [
-          "Eliminated duplicate manual re-entry errors by automating transactional data pipelines",
-          "Reduced policy underwriting turnaround time by 45%",
-          "Implemented automated executive operational dashboards for Board oversight"
+          "Internal insured persons management platform development in PHP",
+          "Client information management optimization",
+          "Internal processing workflow improvements"
         ]
       }
     },
     {
       id: "jsoft",
-      period: "2018 - 2020",
+      period: "Juil. 2018 – Juil. 2020",
       role: {
-        fr: "Développeur d'Applications",
-        en: "Software Applications Developer"
+        fr: "Développeur Web",
+        en: "Web Developer"
       },
-      company: "JSOFT Technologies",
+      company: "JSOFT Technologies, Abidjan",
       tag: {
-        fr: "INGÉNIERIE LOGICIELLE",
-        en: "SOFTWARE ENGINEERING"
+        fr: "INTÉGRATEUR DE SOLUTIONS",
+        en: "SOLUTIONS INTEGRATOR"
       },
       description: {
-        fr: "Développement de solutions de facturation et de gestion commerciale sous Windev et PHP/MySQL. Conception de modules métiers pour PME et grands comptes.",
-        en: "Engineered billing, POS, and commercial ERP applications in Windev and PHP/MySQL. Crafted tailored business modules for SMEs and enterprise accounts."
+        fr: "Conception d'applications web en PHP / MySQL optimisant les processus de souscription d'assurances. Module de renouvellement des contrats d'assurance automobile en Windev.",
+        en: "Web application design in PHP / MySQL optimizing insurance underwriting processes. Auto insurance contract renewal module in Windev."
       },
       achievements: {
         fr: [
-          "Développement complet de modules de gestion de stocks et de caisse décentralisée",
-          "Migration de bases de données volumineuses avec intégrité référentielle garantie",
-          "Support technique niveau 2 et formation des utilisateurs finaux en entreprise"
+          "Conception d'applications web en PHP / MySQL pour la souscription d'assurances",
+          "Module de renouvellement des contrats automobile en Windev : +15% d'efficacité",
+          "Optimisation des processus de souscription"
         ],
         en: [
-          "End-to-end development of inventory management and distributed POS cashier modules",
-          "High-volume database migration with strict relational integrity verification",
-          "Tier-2 technical support and on-site staff training for corporate clients"
+          "PHP / MySQL web applications for insurance underwriting",
+          "Auto insurance contract renewal module in Windev: +15% efficiency",
+          "Underwriting process optimization"
         ]
       }
     },
     {
       id: "saas",
-      period: "2016 - 2018",
+      period: "Févr. 2016 – Juil. 2018",
       role: {
         fr: "Assistant Informatique",
-        en: "IT & Systems Assistant"
+        en: "IT Assistant"
       },
-      company: "SAAS",
+      company: "Société Africaine d'Assistance et de Services, Abidjan",
       tag: {
-        fr: "INFRA & SYSTÈMES",
-        en: "INFRASTRUCTURE & SYSTEMS"
+        fr: "GESTIONNAIRE SANTÉ",
+        en: "HEALTH INSURANCE"
       },
       description: {
-        fr: "Administration du parc informatique, maintien des réseaux locaux (LAN), support technique utilisateurs et protocoles de sauvegardes sécurisées.",
-        en: "Administered company workstation fleet, maintained local area network (LAN) stability, provided end-user hardware/software support, and enforced automated backup protocols."
+        fr: "Module d'exclusion en Windev 17 pour une gestion plus flexible des remboursements (factures pharmacies et cliniques). Système de gestion des cartes d'assurés en PHP / MySQL.",
+        en: "Exclusion module in Windev 17 for more flexible reimbursement management (pharmacy and clinic invoices). Insured card management system in PHP / MySQL."
       },
       achievements: {
         fr: [
-          "Garantie d'une disponibilité du réseau local supérieure à 99.5%",
-          "Mise en conformité des postes de travail et déploiement centralisé d'antivirus",
-          "Documentation complète des procédures de maintenance et de reprise d'activité"
+          "Module d'exclusion en Windev 17 pour la gestion des remboursements",
+          "Système de gestion des cartes d'assurés en PHP / MySQL",
+          "Prise en charge rapide dans les centres de santé et pharmacies"
         ],
         en: [
-          "Maintained LAN availability exceeding 99.5% uptime",
-          "Harmonized company workstations and managed centralized endpoint security rollouts",
-          "Authored complete IT disaster recovery procedures and maintenance runbooks"
+          "Windev 17 exclusion module for reimbursement management",
+          "Insured card management system in PHP / MySQL",
+          "Faster processing at health centers and pharmacies"
         ]
       }
     }
@@ -691,30 +755,30 @@ export const portfolioData: PortfolioData = {
   education: [
     {
       id: "epitech-wecode",
-      year: "2024",
+      year: "Avr. 2024 – Nov. 2024",
       degree: {
         fr: "Programme WECODE",
-        en: "WECODE Intensive Software Engineering"
+        en: "WECODE Professional Integration Program"
       },
-      institution: "Coding Academy by Epitech",
+      institution: "Coding Academy by Epitech, Abidjan",
       tag: {
-        fr: "ÉLITE IMMERSION & EXCELLENCE",
-        en: "ELITE IMMERSION & EXCELLENCE"
+        fr: "FORMATION INTENSIVE",
+        en: "INTENSIVE TRAINING"
       },
       description: {
-        fr: "Formation intensive en ingénierie logicielle full-stack, architectures distribuées modernes, revues de code rigoureuses et patterns de conception avancés.",
-        en: "Rigorous intensive software engineering program: modern full-stack systems, distributed computing, peer code reviews, and advanced design patterns."
+        fr: "Formation intensive web & mobile : Laravel, Vue.js / React, NestJS, Flutter / React Native, Flask.",
+        en: "Intensive web & mobile training: Laravel, Vue.js / React, NestJS, Flutter / React Native, Flask."
       },
-      skillsGained: ["Architecture Logicielle", "Clean Code & Tests", "DevOps & Docker", "APIs Avancées", "TypeScript / Node"]
+      skillsGained: ["Laravel", "Vue.js / React", "NestJS", "Flutter / React Native", "Flask"]
     },
     {
       id: "pigier",
-      year: "Universitaire (2e année)",
+      year: "Déc. 2014 – Août 2016",
       degree: {
-        fr: "Licence Pro Génie Logiciel",
-        en: "Professional Bachelor's in Software Engineering"
+        fr: "Licence Pro. Réseaux & Génie Logiciel (2e année)",
+        en: "Professional Bachelor's in Networks & Software Engineering (2nd year)"
       },
-      institution: "Pigier Côte d'Ivoire",
+      institution: "Pigier Côte d'Ivoire, Abidjan",
       tag: {
         fr: "FORMATION UNIVERSITAIRE",
         en: "UNIVERSITY CURRICULUM"
@@ -723,23 +787,23 @@ export const portfolioData: PortfolioData = {
         fr: "Conception orientée objet, modélisation UML, bases de données relationnelles avancées, structures de données et administration des systèmes d'information.",
         en: "Object-oriented design, UML modeling, advanced relational database architecture, data structures, and enterprise information systems administration."
       },
-      skillsGained: ["Modélisation UML", "Bases de Données (SQL)", "Algorithmique Avancée", "Réseaux & OS", "Génie Logiciel"]
+      skillsGained: ["Modélisation UML", "Bases de Données (SQL)", "Algorithmique", "Réseaux & OS", "Génie Logiciel"]
     },
     {
       id: "bac",
-      year: "Fondation Scientifique",
+      year: "2013 – 2014",
       degree: {
-        fr: "Baccalauréat Série D",
+        fr: "Baccalauréat, série D",
         en: "Scientific Baccalaureate (Series D)"
       },
-      institution: "Enseignement Secondaire Général",
+      institution: "Lycée Moderne Adjamé Harris, Abidjan",
       tag: {
         fr: "FONDATION SCIENTIFIQUE",
         en: "SCIENTIFIC FOUNDATION"
       },
       description: {
-        fr: "Raisonnement formel rigoureux, démarche d'investigation mathématique et bases scientifiques appliquées aux structures logiques et algorithmiques.",
-        en: "Rigorous analytical reasoning, mathematical logic, and scientific problem-solving methods directly applied to algorithmic thinking."
+        fr: "Raisonnement formel, démarche d'investigation mathématique et bases scientifiques appliquées aux structures logiques.",
+        en: "Formal reasoning, mathematical logic, and scientific problem-solving methods applied to logical structures."
       },
       skillsGained: ["Mathématiques", "Logique Formelle", "Physique-Chimie", "Méthode Scientifique"]
     }
@@ -752,8 +816,8 @@ export const portfolioData: PortfolioData = {
       company: "Assurland Africa",
       initials: "DT",
       quote: {
-        fr: "Aristide a transformé notre architecture legacy en un système modulaire performant. Sa capacité à comprendre les enjeux métier de l'assurance tout en proposant des solutions techniques élégantes est remarquable.",
-        en: "Aristide transformed our legacy architecture into a high-performance modular system. His ability to understand insurance business challenges while proposing elegant technical solutions is remarkable."
+        fr: "Aristide a su initialiser et structurer le projet CRM avec une rigueur technique qui a permis à l'équipe de 4 développeurs d'avancer efficacement sur les modules métier.",
+        en: "Aristide was able to initialize and structure the CRM project with technical rigor that allowed the team of 4 developers to efficiently progress on business modules."
       },
       relation: { fr: "Collaborateur direct", en: "Direct collaborator" }
     },
@@ -789,14 +853,14 @@ export const portfolioData: PortfolioData = {
     },
     paragraphs: {
       fr: [
-        "Ingénieur logiciel passionné avec plus de 8 ans d'expérience dans la conception et le déploiement de systèmes critiques. Basé à Abidjan, je combine une expertise technique approfondie en architectures distribuées avec une vision produit orientée impact.",
-        "Mon approche : comprendre le métier avant de coder. Chaque solution que je conçois part d'une analyse rigoureuse des contraintes business, de la volumétrie attendue et des exigences de fiabilité. Je privilégie les architectures simples, testables et évolutives.",
-        "Formé à Epitech et forgé par des projets allant du monitoring audio temps réel à la gestion hospitalière, je suis à l'aise aussi bien en backend haute performance qu'en interfaces utilisateur soignées."
+        "Développeur web full-stack avec plus de 8 ans d'expérience (Laravel, Angular, Vue.js / Nuxt.js, PHP / MySQL). Actuellement en charge du développement du CRM d'Assurland Africa.",
+        "J'ai auparavant livré des applications pour la GIZ et des organisations privées, et conçu des solutions métier pour le secteur de l'assurance santé. À l'aise du développement à l'accompagnement technique de profils juniors.",
+        "Formé à Epitech (programme WECODE) et forgé par des projets allant du monitoring audio temps réel à la gestion hospitalière, je suis à l'aise aussi bien en backend avec Laravel qu'en interfaces frontend avec Angular et Vue.js."
       ],
       en: [
-        "Passionate software engineer with 8+ years of experience designing and deploying mission-critical systems. Based in Abidjan, I combine deep technical expertise in distributed architectures with a product vision focused on measurable impact.",
-        "My approach: understand the business before writing code. Every solution I design starts with rigorous analysis of business constraints, expected load, and reliability requirements. I favor simple, testable, and evolvable architectures.",
-        "Trained at Epitech and forged through projects ranging from real-time audio monitoring to hospital management systems, I'm equally comfortable building high-performance backends and polished user interfaces."
+        "Full-stack web developer with 8+ years of experience (Laravel, Angular, Vue.js / Nuxt.js, PHP / MySQL). Currently in charge of CRM development at Assurland Africa.",
+        "Previously delivered applications for GIZ and private organizations, and designed business solutions for the health insurance sector. Comfortable from development to technical mentoring of junior profiles.",
+        "Trained at Epitech (WECODE program) and forged through projects ranging from real-time audio monitoring to hospital management, I'm equally comfortable with Laravel backends and Angular/Vue.js frontends."
       ]
     },
     highlights: [
