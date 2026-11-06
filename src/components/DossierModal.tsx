@@ -44,7 +44,7 @@ export const DossierModal: React.FC = () => {
     setTimeout(() => {
       setClosing(false);
       closeModal();
-    }, 350);
+    }, 200);
   }, [closeModal]);
 
   if (!isModalOpen) return null;
